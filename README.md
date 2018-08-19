@@ -3,7 +3,12 @@
 [![Build Status](https://travis-ci.org/makerdao/ethgasstation-client.svg?branch=master)](https://travis-ci.org/makerdao/ethgasstation-client)
 [![codecov](https://codecov.io/gh/makerdao/ethgasstation-client/branch/master/graph/badge.svg)](https://codecov.io/gh/makerdao/ethgasstation-client)
 
-TODO
+Tiny asynchronous client of the ethgasstation.info API.
+
+It operates using a background thread, which fetches current recommended gas prices from ethgasstation.info
+every `refresh_interval` seconds. If due to network issues no current gas prices have been fetched
+for `expiry` seconds, old values expire and all `*_price()` methods will start returning `None` until
+the feed becomes available again.
 
 <https://chat.makerdao.com/channel/keeper>
 
@@ -26,6 +31,7 @@ For some known macOS issues see the [pymaker](https://github.com/makerdao/ethgas
 ## License
 
 See [COPYING](https://github.com/makerdao/ethgasstation-client/blob/master/COPYING) file.
+
 
 ### Disclaimer
 
