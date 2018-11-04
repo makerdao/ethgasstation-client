@@ -21,11 +21,3 @@ import time
 from ethgasstation_client import EthGasStation
 
 
-logging.basicConfig(format='%(asctime)-15s %(levelname)-8s %(message)s', level=logging.DEBUG)
-logging.getLogger('urllib3.connectionpool').setLevel(logging.INFO)
-logging.getLogger('requests.packages.urllib3.connectionpool').setLevel(logging.INFO)
-
-egs = EthGasStation(60, 600)
-while True:
-    print(egs.fast_price())
-    time.sleep(5)
