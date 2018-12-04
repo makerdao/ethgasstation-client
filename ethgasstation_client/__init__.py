@@ -99,10 +99,10 @@ class EthGasStation:
             return None
 
     def safe_low_price(self) -> Optional[int]:
-        """Returns the current 'SafeLow (<60m)' gas rice (in Wei).
+        """Returns the current 'SafeLow (<30m)' gas rice (in Wei).
 
         Returns:
-            The current 'SafeLow (<60m)' gas price (in Wei), or `None` if the EthGasStation
+            The current 'SafeLow (<30m)' gas price (in Wei), or `None` if the EthGasStation
             feed has expired.
         """
         return self._return_value_if_valid(self._safe_low_price)
