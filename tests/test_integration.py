@@ -39,3 +39,12 @@ def test_integration():
             break
 
         time.sleep(1)
+
+
+def test_url():
+    egs = EthGasStation(10, 600)
+    assert egs.URL == "https://ethgasstation.info/json/ethgasAPI.json"
+
+    egs = EthGasStation(10, 600, "abcdefg")
+    assert egs.URL == "https://ethgasstation.info/json/ethgasAPI.json?api-key=abcdefg"
+
