@@ -47,9 +47,12 @@ class EthGasStation:
 
     logger = logging.getLogger()
 
-    def __init__(self, refresh_interval: int, expiry: int):
+    def __init__(self, refresh_interval: int, expiry: int, api_key=None):
         assert(isinstance(refresh_interval, int))
         assert(isinstance(expiry, int))
+
+        if api_key is not None:
+            self.URL = f"{self.URL}?api-key={api_key}"
 
         self.refresh_interval = refresh_interval
         self.expiry = expiry

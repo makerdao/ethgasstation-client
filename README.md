@@ -5,13 +5,15 @@
 
 Tiny asynchronous client of the ethgasstation.info API.
 
+#### NOTE:
+###### please see https://ethgasstation.info/blog/changes-to-egs-api/. You have to sign up for an API Key and use it when instantiating EthGasStation client. For backward compatibility reasons client can still be created without a key but this can result in API call failures. 
+
 It operates using a background thread, which fetches current recommended gas prices from ethgasstation.info
 every `refresh_interval` seconds. If due to network issues no current gas prices have been fetched
 for `expiry` seconds, old values expire and all `*_price()` methods will start returning `None` until
 the feed becomes available again.
 
 <https://chat.makerdao.com/channel/keeper>
-
 
 ## Installation
 
