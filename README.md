@@ -1,6 +1,6 @@
 # ethgasstation-client
 
-[![Build Status](https://travis-ci.org/makerdao/ethgasstation-client.svg?branch=master)](https://travis-ci.org/makerdao/ethgasstation-client)
+![Build Status](https://github.com/makerdao/ethgasstation-client/actions/workflows/.github/workflows/tests.yaml/badge.svg?branch=master)
 [![codecov](https://codecov.io/gh/makerdao/ethgasstation-client/branch/master/graph/badge.svg)](https://codecov.io/gh/makerdao/ethgasstation-client)
 
 Tiny asynchronous client of the ethgasstation.info API.
